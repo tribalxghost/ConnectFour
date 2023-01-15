@@ -63,7 +63,6 @@ function findSpotForCol(x) {
   // TODO: write the real version of this, rather than always returning 0
   let count = null
   for(let i = 0; i < 6; i++){
-    console.log(i)
     let cell = document.getElementById(`${i}-${x}`)
     if(cell.innerHTML === ""){
        count = i
@@ -118,9 +117,7 @@ function handleClick(evt) {
 
   // check for tie
   // TODO: check if all cells in board are filled; if so call, call endGame
-  if (board.every(row => row.every(cell => cell))) {
-    return endGame('Tie!');
-  }
+
   // switch players
   // TODO: switch currPlayer 1 <-> 2
   currPlayer === 1 ? currPlayer = 2 : currPlayer = 1
